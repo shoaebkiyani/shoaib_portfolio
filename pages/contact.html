@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../files/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:wght@300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Me</title>
+  </head>
+  <body class="container">
+    <header>
+      <nav class="menu">
+        <ul class="menu-nav">
+          <li class="nav-item" data-id="home">
+            <a href="index.html" title="Home">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+          <li class="nav-item" data-id="about">
+            <a href="about.html" title="About"> <i class="fas fa-user"></i> </a>
+          </li>
+          <li class="nav-item" data-id="projects">
+            <a href="projects.html" title="Projects">
+              <i class="fas fa-tasks"></i>
+            </a>
+          </li>
+          <li class="nav-item" data-id="contact">
+            <a href="contact.html" title="Contact">
+              <i class="fas fa-envelope-open"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="contact">
+      <div class="headings">
+        <h1 class="lg-heading">
+          How to reach <span class="lg-subheading">Me</span>
+        </h1>
+        <h2 class="sm-heading">I would be happy to answer your queries ...</h2>
+      </div>
+      <div class="contact-me">
+        <div class="my-info">
+          <ul>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel: +358466326182" title="Give me a call"
+                >+358 46 632 6182</a
+              >
+            </li>
+            <li>
+              <i class="fa fa-envelope-open"></i
+              ><a href="mailto:shoaebkiyani@yahoo.com" title="Send me an email">
+                shoaebkiyani@yahoo.com
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker-alt"></i>
+              <a href="https://goo.gl/maps/Vc2v2oqk557hKwbY8" target="_blank">
+                Kruutinkuja 1, 33710 Tampere
+              </a>
+            </li>
+          </ul>
+          <div class="icons">
+            <a
+              href="https://github.com/shoaebkiyani/"
+              target="_blank"
+              class="icon"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shoaib-kiyani-aa30b759/"
+              target="_blank"
+              class="icon"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form
+            name="contact"
+            action="https://formsubmit.co/762fa0ff97e2be20dbcf38a2cca30d25"
+            method="POST"
+            data-netlify="true"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://127.0.0.1:5500/pages/thankyou.html"
+            />
+            <p>
+              <input type="text" name="name" placeholder="your name" required />
+            </p>
+            <p>
+              <input
+                type="email"
+                name="email"
+                placeholder="your email"
+                required
+              />
+            </p>
+            <p class="full">
+              <input
+                type="text"
+                name="subject"
+                placeholder="subject"
+                required
+              />
+            </p>
+            <p class="full">
+              <textarea
+                name="message"
+                placeholder="your message..."
+                rows="10"
+                required
+              ></textarea>
+            </p>
+            <button class="full" type="submit">send</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer">Copyright &copy; 2022</footer>
+    <script src="../files/js/main.js"></script>
+  </body>
+</html>

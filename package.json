@@ -1,0 +1,19 @@
+{
+  "name": "shoaib_portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio",
+  "main": "main.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o files/css/ --recursive"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "JavaScript"
+  ],
+  "author": "Shoaib Kiyani",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
