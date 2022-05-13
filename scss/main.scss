@@ -1,5 +1,4 @@
 @import "config";
-@import "media";
 
 * {
   margin: 0;
@@ -573,3 +572,5 @@ main {
   padding: 10px;
   text-align: center;
 }
+
+@import "media";

@@ -1,108 +1,4 @@
 /* Media Queries */
-@media only screen and (max-width: 778px) {
-  main {
-    flex-wrap: wrap-reverse;
-    align-content: space-around;
-    min-height: calc(100vh - 140px); }
-    main#home {
-      margin: 0; }
-    main#about, main#projects, main#contact {
-      transition: all 0.5s ease-in-out;
-      margin-left: 2rem; }
-    main#thanks .lg-heading {
-      font-size: 2rem; }
-    main#thanks .sm-heading {
-      font-size: 1.2rem; }
-    main .main-content {
-      text-align: center;
-      margin-right: 0;
-      padding-bottom: 80px; }
-    main .lg-heading {
-      font-size: 3.5rem; }
-    main .sm-heading {
-      font-size: 1.3rem; }
-    main .branding {
-      height: 160px;
-      margin-left: 25px; }
-      main .branding .portrait {
-        background-image: url("../img/portrait_profile_small.jpg");
-        height: 150px;
-        width: 150px;
-        border-radius: 50%; }
-  header {
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(64, 64, 64, 0.5); }
-    header .menu-button {
-      visibility: hidden; }
-    header .menu-nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 100vw; }
-      header .menu-nav .nav-item {
-        margin: 1rem; }
-        header .menu-nav .nav-item:hover {
-          height: 55px;
-          width: 55px; }
-          header .menu-nav .nav-item:hover .tooltip {
-            visibility: hidden; }
-  /* About Section */
-  .about-content .profile {
-    grid-template-columns: 1fr; }
-    .about-content .profile-btn {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-    .about-content .profile-content {
-      margin-top: 20px; }
-  /* Contact Section */
-  .contact-me {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-bottom: 200px; }
-    .contact-me .my-info .icons {
-      justify-content: center; }
-  #main-footer {
-    margin-bottom: 100px; } }
-
-@media only screen and (min-width: 640px) and (max-width: 900px) {
-  main#thanks .sm-heading {
-    font-size: 1.3rem; }
-  main .lg-heading {
-    font-size: 3.7rem; }
-  main .sm-heading {
-    font-size: 1.4rem; }
-  main .branding {
-    height: 160px; }
-    main .branding .portrait {
-      background-image: url("../img/portrait_profile_small.jpg");
-      height: 150px;
-      width: 150px;
-      border-radius: 50%; }
-  main .main-content {
-    padding-bottom: 0;
-    padding-top: 20px; } }
-
-@media only screen and (min-width: 901px) and (max-width: 1070px) {
-  main .lg-heading {
-    font-size: 4rem; }
-  main .sm-heading {
-    font-size: 1.7rem; }
-  main .branding {
-    height: 250px; }
-    main .branding .portrait {
-      background-image: url("../img/portrait_profile.jpg");
-      height: 235px;
-      width: 235px;
-      border-radius: 50%; } }
-
 * {
   margin: 0;
   padding: 0;
@@ -566,3 +462,107 @@ main {
   transition: all 0.5s ease-in-out;
   padding: 10px;
   text-align: center; }
+
+@media only screen and (max-width: 778px) {
+  main {
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+    min-height: calc(100vh - 140px); }
+    main#home {
+      margin: 0; }
+    main#about, main#projects, main#contact {
+      transition: all 0.5s ease-in-out;
+      margin-left: 2rem; }
+    main#thanks .lg-heading {
+      font-size: 2rem; }
+    main#thanks .sm-heading {
+      font-size: 1.2rem; }
+    main .main-content {
+      text-align: center;
+      margin-right: 0;
+      padding-bottom: 80px; }
+    main .lg-heading {
+      font-size: 3.5rem; }
+    main .sm-heading {
+      font-size: 1.3rem; }
+    main .branding {
+      height: 160px;
+      margin-left: 25px; }
+      main .branding .portrait {
+        background-image: url("../img/portrait_profile_small.jpg");
+        height: 150px;
+        width: 150px;
+        border-radius: 50%; }
+  header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(64, 64, 64, 0.5); }
+    header .menu-button {
+      visibility: hidden; }
+    header .menu-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100vw; }
+      header .menu-nav .nav-item {
+        margin: 1rem; }
+        header .menu-nav .nav-item:hover {
+          height: 55px;
+          width: 55px; }
+          header .menu-nav .nav-item:hover .tooltip {
+            visibility: hidden; }
+  /* About Section */
+  .about-content .profile {
+    grid-template-columns: 1fr; }
+    .about-content .profile-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .about-content .profile-content {
+      margin-top: 20px; }
+  /* Contact Section */
+  .contact-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 200px; }
+    .contact-me .my-info .icons {
+      justify-content: center; }
+  #main-footer {
+    margin-bottom: 100px; } }
+
+@media only screen and (min-width: 640px) and (max-width: 900px) {
+  main#thanks .sm-heading {
+    font-size: 1.3rem; }
+  main .lg-heading {
+    font-size: 3.7rem; }
+  main .sm-heading {
+    font-size: 1.4rem; }
+  main .branding {
+    height: 160px; }
+    main .branding .portrait {
+      background-image: url("../img/portrait_profile_small.jpg");
+      height: 150px;
+      width: 150px;
+      border-radius: 50%; }
+  main .main-content {
+    padding-bottom: 0;
+    padding-top: 20px; } }
+
+@media only screen and (min-width: 901px) and (max-width: 1070px) {
+  main .lg-heading {
+    font-size: 4rem; }
+  main .sm-heading {
+    font-size: 1.7rem; }
+  main .branding {
+    height: 250px; }
+    main .branding .portrait {
+      background-image: url("../img/portrait_profile.jpg");
+      height: 235px;
+      width: 235px;
+      border-radius: 50%; } }
