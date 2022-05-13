@@ -1,53 +1,5 @@
-$primary-color: #333;
-//$secondary-color: #ceb10c;
-$secondary-color: rgba(230, 93, 69, 255);
-$text-color-light: #fff;
-$text-color-dark: #000;
-$show-home-image: true;
-$home-image: url("../img/background_image.jpg");
-$background-opacity: 0.7;
-
-@mixin easeOut {
-  transition: all 0.5s ease-in-out;
-}
-
-@mixin mediaLg {
-  @media only screen and (min-width: 901px) and (max-width: 1070px) {
-    @content;
-  }
-}
-
-@mixin mediaMd {
-  @media only screen and (min-width: 640px) and (max-width: 900px) {
-    @content;
-  }
-}
-
-@mixin mediaSm {
-  @media only screen and (max-width: 778px) {
-    @content;
-  }
-}
-
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: -1;
-      background: rgba($primary-color, $background-opacity);
-    }
-  }
-}
+@import "config";
+@import "media";
 
 * {
   margin: 0;
@@ -62,7 +14,6 @@ $background-opacity: 0.7;
 // Chrome, Edge, and Safari
 *::-webkit-scrollbar {
   width: 10px;
-
   &-track {
     background-color: rgba($secondary-color, 1);
     border-radius: 20px;
@@ -82,6 +33,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+/* Header / Navigation Menu */
 header {
   position: fixed;
   height: 100vh;
@@ -103,7 +55,6 @@ header {
       justify-content: center;
       align-items: center;
       margin: 1rem 0;
-
       a {
         text-decoration: none;
         color: $text-color-light;
@@ -123,6 +74,7 @@ header {
   }
 }
 
+/* Home Section */
 h1,
 h2,
 h3,
@@ -130,25 +82,21 @@ h4,
 h5 {
   margin: 0;
   font-weight: 400;
-
   &.lg-heading {
     font-size: 4.7rem;
   }
-
   &.sm-heading {
     margin: 0.5rem 0 2rem 0;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 1), 0.3);
     width: fit-content;
   }
-
   &.text-secondary {
     color: $secondary-color;
   }
 }
 
 main {
-  //border: 2px solid white;
   min-height: calc(100vh - 45px);
   &#home {
     display: flex;
@@ -158,7 +106,6 @@ main {
     margin-left: 7rem;
     padding: 0 2rem;
   }
-
   &#about,
   &#projects,
   &#contact {
@@ -191,11 +138,9 @@ main {
       color: $text-color-light;
     }
   }
-
   .main-content {
     margin-right: 4rem;
   }
-
   .branding {
     border-bottom: 2px solid $secondary-color;
     height: 260px;
@@ -205,18 +150,15 @@ main {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      //border-bottom: 2px solid $secondary-color;
       transition: all 0.5s ease-in;
       &:hover {
         transform: translateY(3%);
       }
     }
   }
-
   .lg-subheading {
     color: $secondary-color;
   }
-
   .icons {
     a {
       text-decoration: none;
@@ -230,38 +172,34 @@ main {
   }
 }
 
+/* For all other sections, except Home */
 .container {
   background-color: #030303;
 }
 
 /* About Section */
-
 .about-content {
   display: grid;
   grid-template-columns: 1fr;
-  //grid-template-rows: 1fr 1fr;
   min-height: calc(100vh - 180px);
   width: 100%;
-
   .bio {
-    //column-gap: 1rem;
     text-align: justify;
     line-height: 2rem;
     height: fit-content;
     margin-bottom: 20px;
     p {
       a {
-        // text-decoration: none;
         color: $text-color-dark;
         background-color: $secondary-color;
         font-weight: 600;
         padding: 0.5rem;
         border-radius: 0.5rem;
+        margin-left: 15px;
       }
     }
   }
   .portrait {
-    //background-image: url("../img/portrait.jpg");
     height: 200px;
     width: 200px;
     float: right;
@@ -273,7 +211,6 @@ main {
       border: 1px solid $secondary-color;
     }
   }
-
   .profile {
     margin: 0;
     padding: 0;
@@ -344,7 +281,6 @@ main {
     padding: 0rem 1rem;
     gap: 1rem;
     margin-left: 5px;
-
     .circle {
       position: relative;
       width: 150px;
@@ -354,7 +290,6 @@ main {
       background: #ffcdb2;
       overflow: hidden;
       z-index: -1;
-
       .inner {
         display: flex;
         justify-content: center;
@@ -371,7 +306,6 @@ main {
         font-weight: 300;
         color: rgba(255, 255, 255, 0.75);
       }
-
       &.html {
         background-image: conic-gradient(#d9e000 99%, #000000 0);
       }
@@ -432,14 +366,12 @@ main {
 }
 
 /* Project Section */
-
 .project-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-
   .project-item {
     position: relative;
     border-radius: 15px;
@@ -513,7 +445,6 @@ main {
           margin: 10px 1rem;
           cursor: pointer;
           transition: all 0.4s ease-in-out;
-
           i {
             font-size: 1.5rem;
             color: $text-color-dark;
@@ -530,7 +461,6 @@ main {
     }
   }
 }
-
 .project-item:hover .hover-item {
   opacity: 0.9;
   transform: scale(1);
@@ -538,7 +468,6 @@ main {
 }
 
 /* Contact Section */
-
 .contact-me {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -602,7 +531,6 @@ main {
       }
     }
   }
-
   .contact-form {
     background: #f9feff;
     form {
@@ -617,7 +545,6 @@ main {
       textarea {
         width: 100%;
         padding: 1rem;
-        //text-transform: uppercase;
         border: none;
         border-bottom: 1px solid black;
         resize: none;
@@ -643,171 +570,6 @@ main {
 /* Footer Section */
 #main-footer {
   @include easeOut;
-  //margin-top: 20px;
   padding: 10px;
   text-align: center;
-  //   background-color: rgba(230, 93, 69, 255);
-}
-
-@include mediaSm {
-  main {
-    flex-wrap: wrap-reverse;
-    align-content: space-around;
-    min-height: calc(100vh - 140px);
-
-    &#home {
-      margin: 0;
-    }
-    &#about,
-    &#projects,
-    &#contact {
-      @include easeOut;
-      margin-left: 2rem;
-    }
-    &#thanks {
-      .lg-heading {
-        font-size: 2rem;
-      }
-      .sm-heading {
-        font-size: 1.2rem;
-      }
-    }
-    .main-content {
-      text-align: center;
-      margin-right: 0;
-      padding-bottom: 80px;
-    }
-    .lg-heading {
-      font-size: 3.5rem;
-    }
-    .sm-heading {
-      font-size: 1.3rem;
-    }
-    .branding {
-      height: 160px;
-      margin-left: 25px;
-      //margin: 50px 55px 0 0;
-      .portrait {
-        background-image: url("../img/portrait_profile_small.jpg");
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-      }
-    }
-  }
-  header {
-    //border: 2px solid white;
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(lighten($primary-color, 5), 0.5);
-    .menu-button {
-      visibility: hidden;
-    }
-    .menu-nav {
-      //border: 2px solid yellow;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      .nav-item {
-        margin: 1rem;
-        &:hover {
-          height: 55px;
-          width: 55px;
-          .tooltip {
-            visibility: hidden;
-          }
-        }
-      }
-    }
-  }
-
-  /* About Section */
-  .about-content {
-    .profile {
-      grid-template-columns: 1fr;
-      &-btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // margin-bottom: 30px;
-      }
-      &-content {
-        margin-top: 20px;
-      }
-    }
-  }
-
-  /* Contact Section */
-  .contact-me {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-bottom: 200px;
-    .my-info {
-      .icons {
-        justify-content: center;
-      }
-    }
-  }
-
-  #main-footer {
-    margin-bottom: 100px;
-  }
-}
-
-@include mediaMd {
-  main {
-    &#thanks {
-      .sm-heading {
-        font-size: 1.3rem;
-      }
-    }
-    .lg-heading {
-      font-size: 3.7rem;
-    }
-    .sm-heading {
-      font-size: 1.4rem;
-    }
-    .branding {
-      height: 160px;
-      //margin: 50px 55px 0 0;
-      .portrait {
-        background-image: url("../img/portrait_profile_small.jpg");
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-      }
-    }
-    .main-content {
-      padding-bottom: 0;
-      padding-top: 20px;
-    }
-  }
-}
-
-@include mediaLg {
-  main {
-    .lg-heading {
-      font-size: 4rem;
-    }
-    .sm-heading {
-      font-size: 1.7rem;
-    }
-    .branding {
-      height: 250px;
-      //margin: 50px 55px 0 0;
-      .portrait {
-        background-image: url("../img/portrait_profile.jpg");
-        height: 235px;
-        width: 235px;
-        border-radius: 50%;
-      }
-    }
-  }
 }

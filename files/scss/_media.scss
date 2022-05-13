@@ -1,0 +1,155 @@
+@include mediaSm {
+  main {
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+    min-height: calc(100vh - 140px);
+    &#home {
+      margin: 0;
+    }
+    &#about,
+    &#projects,
+    &#contact {
+      @include easeOut;
+      margin-left: 2rem;
+    }
+    &#thanks {
+      .lg-heading {
+        font-size: 2rem;
+      }
+      .sm-heading {
+        font-size: 1.2rem;
+      }
+    }
+    .main-content {
+      text-align: center;
+      margin-right: 0;
+      padding-bottom: 80px;
+    }
+    .lg-heading {
+      font-size: 3.5rem;
+    }
+    .sm-heading {
+      font-size: 1.3rem;
+    }
+    .branding {
+      height: 160px;
+      margin-left: 25px;
+      //margin: 50px 55px 0 0;
+      .portrait {
+        background-image: url("../img/portrait_profile_small.jpg");
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+    }
+  }
+  header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(lighten($primary-color, 5), 0.5);
+    .menu-button {
+      visibility: hidden;
+    }
+    .menu-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      .nav-item {
+        margin: 1rem;
+        &:hover {
+          height: 55px;
+          width: 55px;
+          .tooltip {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  /* About Section */
+  .about-content {
+    .profile {
+      grid-template-columns: 1fr;
+      &-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-content {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  /* Contact Section */
+  .contact-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 200px;
+    .my-info {
+      .icons {
+        justify-content: center;
+      }
+    }
+  }
+  #main-footer {
+    margin-bottom: 100px;
+  }
+}
+
+@include mediaMd {
+  main {
+    &#thanks {
+      .sm-heading {
+        font-size: 1.3rem;
+      }
+    }
+    .lg-heading {
+      font-size: 3.7rem;
+    }
+    .sm-heading {
+      font-size: 1.4rem;
+    }
+    .branding {
+      height: 160px;
+      .portrait {
+        background-image: url("../img/portrait_profile_small.jpg");
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+    }
+    .main-content {
+      padding-bottom: 0;
+      padding-top: 20px;
+    }
+  }
+}
+
+@include mediaLg {
+  main {
+    .lg-heading {
+      font-size: 4rem;
+    }
+    .sm-heading {
+      font-size: 1.7rem;
+    }
+    .branding {
+      height: 250px;
+      .portrait {
+        background-image: url("../img/portrait_profile.jpg");
+        height: 235px;
+        width: 235px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

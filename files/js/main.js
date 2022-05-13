@@ -1,3 +1,4 @@
+/*Set current nav item to active*/
 const currentLocation = location.href;
 const navLink = document.querySelectorAll("a");
 const navItem = document.querySelectorAll(".nav-item");
@@ -9,10 +10,8 @@ for (let i = 0; i < navLink.length; i++) {
 }
 
 // profile links selector
-
 const resumeLink = document.querySelectorAll(".profile-link");
 const iconLinks = document.querySelectorAll(".fas");
-
 const contentLink = document.querySelectorAll(".detail");
 
 resumeLink.forEach((item) => {
@@ -46,4 +45,5 @@ resumeLink.forEach((item) => {
   });
 });
 
+/* Reset Contact Form */
 document.getElementsByTagName("FORM").reset();
