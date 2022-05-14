@@ -53,7 +53,7 @@ header {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0; }
+    margin: 1.5rem 0; }
     header .menu-nav .nav-item a {
       text-decoration: none;
       color: #fff; }
@@ -79,13 +79,13 @@ h5 {
   h3.lg-heading,
   h4.lg-heading,
   h5.lg-heading {
-    font-size: 4.7rem; }
+    font-size: 4rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading,
   h4.sm-heading,
   h5.sm-heading {
-    margin: 0.5rem 0 2rem 0;
+    margin: 0.3rem 0 2rem 0;
     padding: 0.2rem 1rem;
     background: rgba(54, 54, 54, 0.3);
     width: fit-content; }
@@ -115,6 +115,7 @@ main {
       width: 100%;
       text-align: center; }
   main#thanks {
+    min-height: calc(100vh - 45px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,9 +128,10 @@ main {
     main#thanks a {
       margin-top: 20px;
       text-decoration: underline;
-      color: #fff; }
+      color: #e65d45; }
   main .main-content {
-    margin-right: 4rem; }
+    margin-right: 4rem;
+    margin-top: 20px; }
   main .branding {
     border-bottom: 2px solid #e65d45;
     height: 260px;
@@ -174,7 +176,7 @@ main {
       font-weight: 600;
       padding: 0.5rem;
       border-radius: 0.5rem;
-      margin-left: 15px; }
+      margin-left: 10px; }
   .about-content .portrait {
     height: 200px;
     width: 200px;
@@ -378,12 +380,12 @@ main {
 
 /* Contact Section */
 .contact-me {
+  min-height: calc(100vh - 310px);
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1170px;
   margin: auto;
-  box-shadow: 0 0 20px 0 rgba(230, 93, 69, 0.7);
-  height: 60vh; }
+  box-shadow: 0 0 20px 0 rgba(230, 93, 69, 0.7); }
   .contact-me > * {
     padding: 1rem; }
   .contact-me .my-info {
@@ -463,6 +465,17 @@ main {
   padding: 10px;
   text-align: center; }
 
+@media only screen and (max-width: 499px) {
+  /* About Section */
+  .about-content .profile {
+    grid-template-columns: 1fr; }
+    .about-content .profile-btn {
+      font-size: 12px; }
+    .about-content .profile-content {
+      margin-top: 20px; }
+  #main-footer {
+    visibility: hidden; } }
+
 @media only screen and (max-width: 778px) {
   main {
     flex-wrap: wrap-reverse;
@@ -480,13 +493,14 @@ main {
     main .main-content {
       text-align: center;
       margin-right: 0;
+      margin-top: 0;
       padding-bottom: 80px; }
     main .lg-heading {
       font-size: 3.5rem; }
     main .sm-heading {
       font-size: 1.3rem; }
     main .branding {
-      height: 160px;
+      height: 155px;
       margin-left: 25px; }
       main .branding .portrait {
         background-image: url("../img/portrait_profile_small.jpg");
@@ -523,6 +537,8 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      .about-content .profile-btn .fas {
+        margin-right: 10px; }
     .about-content .profile-content {
       margin-top: 20px; }
   /* Contact Section */
@@ -530,9 +546,11 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    margin-bottom: 200px; }
+    margin-bottom: 200px;
+    height: 68vh; }
     .contact-me .my-info .icons {
-      justify-content: center; }
+      justify-content: center;
+      margin-top: 20px; }
   #main-footer {
     margin-bottom: 100px; } }
 
@@ -540,11 +558,11 @@ main {
   main#thanks .sm-heading {
     font-size: 1.3rem; }
   main .lg-heading {
-    font-size: 3.7rem; }
+    font-size: 3.5rem; }
   main .sm-heading {
-    font-size: 1.4rem; }
+    font-size: 1.2rem; }
   main .branding {
-    height: 160px; }
+    height: 155px; }
     main .branding .portrait {
       background-image: url("../img/portrait_profile_small.jpg");
       height: 150px;
@@ -556,11 +574,11 @@ main {
 
 @media only screen and (min-width: 901px) and (max-width: 1070px) {
   main .lg-heading {
-    font-size: 4rem; }
+    font-size: 3.7rem; }
   main .sm-heading {
-    font-size: 1.7rem; }
+    font-size: 1.5rem; }
   main .branding {
-    height: 250px; }
+    height: 243px; }
     main .branding .portrait {
       background-image: url("../img/portrait_profile.jpg");
       height: 235px;

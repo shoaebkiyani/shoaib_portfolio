@@ -53,7 +53,7 @@ header {
       cursor: pointer;
       justify-content: center;
       align-items: center;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       a {
         text-decoration: none;
         color: $text-color-light;
@@ -82,10 +82,10 @@ h5 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
-    font-size: 4.7rem;
+    font-size: 4rem;
   }
   &.sm-heading {
-    margin: 0.5rem 0 2rem 0;
+    margin: 0.3rem 0 2rem 0;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 1), 0.3);
     width: fit-content;
@@ -120,6 +120,7 @@ main {
     }
   }
   &#thanks {
+    min-height: calc(100vh - 45px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,11 +135,12 @@ main {
     a {
       margin-top: 20px;
       text-decoration: underline;
-      color: $text-color-light;
+      color: $secondary-color;
     }
   }
   .main-content {
     margin-right: 4rem;
+    margin-top: 20px;
   }
   .branding {
     border-bottom: 2px solid $secondary-color;
@@ -194,7 +196,7 @@ main {
         font-weight: 600;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        margin-left: 15px;
+        margin-left: 10px;
       }
     }
   }
@@ -468,12 +470,12 @@ main {
 
 /* Contact Section */
 .contact-me {
+  min-height: calc(100vh - 310px);
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1170px;
   margin: auto;
   box-shadow: 0 0 20px 0 rgba($secondary-color, 0.7);
-  height: 60vh;
   > * {
     padding: 1rem;
   }
