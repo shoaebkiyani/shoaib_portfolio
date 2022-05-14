@@ -1,4 +1,12 @@
 @include mediaXSm {
+  /* Home Section */
+  main#home {
+    position: relative;
+    top: 35px;
+    .branding {
+      margin-left: 10px;
+    }
+  }
   /* About Section */
   .about-content {
     .profile {

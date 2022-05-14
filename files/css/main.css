@@ -466,6 +466,12 @@ main {
   text-align: center; }
 
 @media only screen and (max-width: 499px) {
+  /* Home Section */
+  main#home {
+    position: relative;
+    top: 35px; }
+    main#home .branding {
+      margin-left: 10px; }
   /* About Section */
   .about-content .profile {
     grid-template-columns: 1fr; }
