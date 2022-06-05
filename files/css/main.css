@@ -53,14 +53,14 @@ header {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem 0; }
+    margin: 1.5rem 0;
+    transition: all 0.7s ease-in-out; }
     header .menu-nav .nav-item a {
       text-decoration: none;
       color: #fff; }
     header .menu-nav .nav-item:hover {
-      height: 45px;
-      width: 45px;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.5s;
+      transform: scale(1.2); }
     header .menu-nav .nav-item.active {
       background-color: #e65d45; }
       header .menu-nav .nav-item.active a {
@@ -101,12 +101,12 @@ main {
   main#home {
     display: flex;
     flex-direction: column wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-left: 7rem;
     padding: 0 2rem; }
   main#about, main#projects, main#contact {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
     margin: auto 2rem auto 8rem;
     padding-top: 2rem; }
     main#about .lg-heading, main#projects .lg-heading, main#contact .lg-heading {
@@ -138,6 +138,8 @@ main {
     border-radius: 50%; }
     main .branding .portrait {
       background-image: url("../img/portrait_profile.jpg");
+      position: relative;
+      right: 0%;
       width: 250px;
       height: 250px;
       border-radius: 50%;
@@ -152,7 +154,7 @@ main {
     padding: 0.4rem; }
     main .icons a:hover {
       color: #e65d45;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.7s ease-in-out; }
 
 /* For all other sections, except Home */
 .container {
@@ -183,7 +185,7 @@ main {
     float: right;
     margin-left: 10px;
     transform: perspective(600px) rotateY(-25deg);
-    transition: all 0.4s ease-in-out; }
+    transition: all 0.7s ease-in-out; }
     .about-content .portrait:hover {
       transform: translateX(-2px);
       border: 1px solid #e65d45; }
@@ -192,23 +194,26 @@ main {
     padding: 0;
     display: grid;
     grid-template-columns: 10rem 1fr;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
     border-bottom: 1px solid #e65d45; }
     .about-content .profile-btn {
       height: 100%;
       list-style: none;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: baseline; }
-      .about-content .profile-btn li.active {
-        transition: all 0.5s ease-in-out;
-        background-color: #e65d45;
-        padding: 10px;
-        color: #030303;
-        font-weight: 600;
-        border-radius: 0.5rem; }
+      grid-template-rows: repeat(4, 1fr);
+      align-items: center; }
+      .about-content .profile-btn li {
+        transition: all 0.7s ease-in-out; }
+        .about-content .profile-btn li.active {
+          transition: all 0.7s ease-in-out;
+          background-color: #e65d45;
+          padding: 10px;
+          color: #030303;
+          font-weight: 600;
+          border-radius: 0.5rem; }
+        .about-content .profile-btn li:hover {
+          transition: all 0.7s ease-in-out;
+          transform: scale(1.1); }
       .about-content .profile-btn .fas {
         margin-right: 20px; }
     .about-content .profile-content {
@@ -218,9 +223,28 @@ main {
       padding: 0px 10px 0px 30px; }
       .about-content .profile-content .detail {
         display: none;
-        animation: slide-top 0.9s ease 1; }
-      .about-content .profile-content .work {
+        animation: fadeIn 1s ease 1; }
+      .about-content .profile-content .certificates {
         display: block; }
+        .about-content .profile-content .certificates .cert {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center; }
+          .about-content .profile-content .certificates .cert a {
+            margin: 10px auto;
+            text-decoration: none;
+            transition: all 0.7s ease-in-out; }
+            .about-content .profile-content .certificates .cert a:hover {
+              transition: all 0.7s ease-in-out;
+              transform: scale(1.08); }
+            .about-content .profile-content .certificates .cert a img {
+              height: 100px;
+              width: 100px;
+              border-radius: 50%; }
+            .about-content .profile-content .certificates .cert a .cert-title {
+              color: #e65d45;
+              padding: 10px 10px 0 10px;
+              margin-bottom: 10px; }
       .about-content .profile-content h5 {
         padding-bottom: 20px; }
       .about-content .profile-content p {
@@ -242,7 +266,7 @@ main {
     padding: 0rem 1rem;
     gap: 1rem;
     margin-left: 5px;
-    /* Animation slide from bottom to top */ }
+    /* Animation fade-in effect */ }
     .about-content .wrap-circles .circle {
       position: relative;
       width: 150px;
@@ -284,11 +308,11 @@ main {
       .about-content .wrap-circles .circle.mongo {
         background-image: conic-gradient(rgba(27, 13, 81, 0.867) 65%, #000000 0); }
 
-@keyframes slide-top {
+@keyframes fadeIn {
   0% {
-    transform: translateY(100%); }
+    opacity: 0; }
   100% {
-    transform: translateY(0); } }
+    opacity: 1; } }
 
 /* Project Section */
 .project-content {
@@ -306,7 +330,7 @@ main {
       height: 220px;
       object-fit: cover;
       border-radius: 15px;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.7s ease-in-out; }
     .project-content .project-item .hover-item {
       width: 100%;
       height: 100%;
@@ -322,7 +346,7 @@ main {
       z-index: 1;
       opacity: 0;
       transform: scale(0);
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.7s ease-in-out; }
       .project-content .project-item .hover-item .title {
         display: flex;
         flex-direction: column;
@@ -339,7 +363,7 @@ main {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          margin-bottom: 20px; }
+          margin: 20px; }
           .project-content .project-item .hover-item .title ul li {
             background-color: #000;
             color: #fff;
@@ -380,7 +404,6 @@ main {
 
 /* Contact Section */
 .contact-me {
-  min-height: calc(100vh - 310px);
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1170px;
@@ -400,7 +423,7 @@ main {
       justify-content: flex-start;
       align-items: center; }
       .contact-me .my-info .icons .icon {
-        background-color: #0d0d0d;
+        background-color: #f3c7afe8;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -412,12 +435,12 @@ main {
         transition: all 0.4s ease-in-out; }
         .contact-me .my-info .icons .icon i {
           font-size: 1.5rem;
-          color: #fff;
+          color: #000;
           margin: 0 1rem; }
         .contact-me .my-info .icons .icon:hover {
-          background-color: #f3c7afe8; }
+          background-color: #0d0d0d; }
           .contact-me .my-info .icons .icon:hover i {
-            color: #000; }
+            color: #fff; }
   .contact-me ul {
     list-style: none;
     padding: 0; }
@@ -428,7 +451,8 @@ main {
       text-decoration: none;
       transition-duration: 0.2s; }
       .contact-me ul li a:hover {
-        text-decoration: underline; }
+        text-decoration: underline;
+        color: #3e3e3e; }
   .contact-me .contact-form {
     background: #f9feff; }
     .contact-me .contact-form form {
@@ -461,8 +485,8 @@ main {
 
 /* Footer Section */
 #main-footer {
-  transition: all 0.5s ease-in-out;
-  padding: 10px;
+  transition: all 0.7s ease-in-out;
+  padding: 10px 0;
   text-align: center; }
 
 @media only screen and (max-width: 499px) {
@@ -472,25 +496,101 @@ main {
     top: 35px; }
     main#home .branding {
       margin-left: 10px; }
+  #about h1,
+  #about h2,
+  #about h3,
+  #about h4,
+  #about h5,
+  #projects h1,
+  #projects h2,
+  #projects h3,
+  #projects h4,
+  #projects h5,
+  #contact h1,
+  #contact h2,
+  #contact h3,
+  #contact h4,
+  #contact h5,
+  #thanks h1,
+  #thanks h2,
+  #thanks h3,
+  #thanks h4,
+  #thanks h5 {
+    margin: 0;
+    font-weight: 400; }
+    #about h1.lg-heading,
+    #about h2.lg-heading,
+    #about h3.lg-heading,
+    #about h4.lg-heading,
+    #about h5.lg-heading,
+    #projects h1.lg-heading,
+    #projects h2.lg-heading,
+    #projects h3.lg-heading,
+    #projects h4.lg-heading,
+    #projects h5.lg-heading,
+    #contact h1.lg-heading,
+    #contact h2.lg-heading,
+    #contact h3.lg-heading,
+    #contact h4.lg-heading,
+    #contact h5.lg-heading,
+    #thanks h1.lg-heading,
+    #thanks h2.lg-heading,
+    #thanks h3.lg-heading,
+    #thanks h4.lg-heading,
+    #thanks h5.lg-heading {
+      font-size: 2rem; }
+    #about h1.sm-heading,
+    #about h2.sm-heading,
+    #about h3.sm-heading,
+    #about h4.sm-heading,
+    #about h5.sm-heading,
+    #projects h1.sm-heading,
+    #projects h2.sm-heading,
+    #projects h3.sm-heading,
+    #projects h4.sm-heading,
+    #projects h5.sm-heading,
+    #contact h1.sm-heading,
+    #contact h2.sm-heading,
+    #contact h3.sm-heading,
+    #contact h4.sm-heading,
+    #contact h5.sm-heading,
+    #thanks h1.sm-heading,
+    #thanks h2.sm-heading,
+    #thanks h3.sm-heading,
+    #thanks h4.sm-heading,
+    #thanks h5.sm-heading {
+      font-size: 1.2rem; }
   /* About Section */
+  .about-content .bio p a {
+    font-size: 0.8rem; }
   .about-content .profile {
-    grid-template-columns: 1fr; }
-    .about-content .profile-btn {
-      font-size: 12px; }
+    grid-template-columns: 1fr;
+    margin-left: 0; }
+    .about-content .profile-btn li {
+      font-size: 0.53rem; }
+      .about-content .profile-btn li.active {
+        transition: all 0.7s ease-in-out;
+        background-color: #e65d45;
+        padding: 7px;
+        color: #030303;
+        font-weight: 600;
+        border-radius: 0.5rem; }
     .about-content .profile-content {
       margin-top: 20px; }
+    .about-content .profile-link {
+      display: flex; }
   #main-footer {
     visibility: hidden; } }
 
 @media only screen and (max-width: 778px) {
   main {
     flex-wrap: wrap-reverse;
-    align-content: space-around;
-    min-height: calc(100vh - 140px); }
+    align-content: space-evenly;
+    min-height: calc(100vh - 145px); }
     main#home {
       margin: 0; }
     main#about, main#projects, main#contact {
-      transition: all 0.5s ease-in-out;
+      transition: all 0.7s ease-in-out;
       margin-left: 2rem; }
     main#thanks .lg-heading {
       font-size: 2rem; }
@@ -499,15 +599,14 @@ main {
     main .main-content {
       text-align: center;
       margin-right: 0;
-      margin-top: 0;
-      padding-bottom: 80px; }
+      margin-top: 0; }
     main .lg-heading {
       font-size: 3.5rem; }
     main .sm-heading {
       font-size: 1.3rem; }
     main .branding {
       height: 155px;
-      margin-left: 25px; }
+      margin-left: 20px; }
       main .branding .portrait {
         background-image: url("../img/portrait_profile_small.jpg");
         height: 150px;
@@ -521,8 +620,6 @@ main {
     overflow: hidden;
     z-index: 1;
     background: rgba(64, 64, 64, 0.5); }
-    header .menu-button {
-      visibility: hidden; }
     header .menu-nav {
       display: flex;
       flex-direction: row;
@@ -530,23 +627,32 @@ main {
       align-items: center;
       width: 100vw; }
       header .menu-nav .nav-item {
-        margin: 1rem; }
+        margin: 1rem;
+        transition: all 0.7s ease-in-out; }
         header .menu-nav .nav-item:hover {
-          height: 55px;
-          width: 55px; }
+          transition: all 0.5s;
+          transform: scale(1.2); }
           header .menu-nav .nav-item:hover .tooltip {
             visibility: hidden; }
   /* About Section */
+  .about-content .bio p a {
+    font-size: 0.6rem; }
   .about-content .profile {
     grid-template-columns: 1fr; }
     .about-content .profile-btn {
       display: flex;
-      justify-content: space-between;
-      align-items: center; }
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 0.95rem; }
       .about-content .profile-btn .fas {
         margin-right: 10px; }
     .about-content .profile-content {
       margin-top: 20px; }
+      .about-content .profile-content .certificates .cert a img {
+        height: 70px;
+        width: 70px; }
+      .about-content .profile-content .certificates .cert a .cert-title {
+        font-size: 0.9rem; }
   /* Contact Section */
   .contact-me {
     display: grid;
@@ -576,7 +682,9 @@ main {
       border-radius: 50%; }
   main .main-content {
     padding-bottom: 0;
-    padding-top: 20px; } }
+    padding-top: 20px; }
+  .contact-me {
+    height: 100%; } }
 
 @media only screen and (min-width: 901px) and (max-width: 1070px) {
   main .lg-heading {

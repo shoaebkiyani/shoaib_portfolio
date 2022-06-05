@@ -59,10 +59,10 @@ header {
         color: $text-color-light;
       }
       &:hover {
-        height: 45px;
-        width: 45px;
-        @include easeOut;
+        transition: all 0.5s;
+        transform: scale(1.2);
       }
+      @include easeOut;
       &.active {
         background-color: rgba(230, 93, 69, 255);
         a {
@@ -100,7 +100,7 @@ main {
   &#home {
     display: flex;
     flex-direction: column wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-left: 7rem;
     padding: 0 2rem;
@@ -148,6 +148,8 @@ main {
     border-radius: 50%;
     .portrait {
       background-image: url("../img/portrait_profile.jpg");
+      position: relative;
+      right: 0%;
       width: 250px;
       height: 250px;
       border-radius: 50%;
@@ -206,7 +208,7 @@ main {
     float: right;
     margin-left: 10px;
     transform: perspective(600px) rotateY(-25deg);
-    transition: all 0.4s ease-in-out;
+    @include easeOut;
     &:hover {
       transform: translateX(-2px);
       border: 1px solid $secondary-color;
@@ -217,16 +219,14 @@ main {
     padding: 0;
     display: grid;
     grid-template-columns: 10rem 1fr;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
     border-bottom: 1px solid $secondary-color;
     &-btn {
       height: 100%;
       list-style: none;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      align-items: baseline;
+      grid-template-rows: repeat(4, 1fr);
+      align-items: center;
       li {
         &.active {
           @include easeOut();
@@ -236,6 +236,11 @@ main {
           font-weight: 600;
           border-radius: 0.5rem;
         }
+        &:hover {
+          @include easeOut;
+          transform: scale(1.1);
+        }
+        @include easeOut;
       }
       .fas {
         margin-right: 20px;
@@ -248,10 +253,34 @@ main {
       padding: 0px 10px 0px 30px;
       .detail {
         display: none;
-        animation: slide-top 0.9s ease 1;
+        animation: fadeIn 1s ease 1;
       }
-      .work {
+      .certificates {
         display: block;
+        .cert {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          a {
+            margin: 10px auto;
+            text-decoration: none;
+            &:hover {
+              @include easeOut;
+              transform: scale(1.08);
+            }
+            @include easeOut;
+            img {
+              height: 100px;
+              width: 100px;
+              border-radius: 50%;
+            }
+            .cert-title {
+              color: $secondary-color;
+              padding: 10px 10px 0 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
       }
       h5 {
         padding-bottom: 20px;
@@ -354,13 +383,14 @@ main {
       }
     }
 
-    /* Animation slide from bottom to top */
-    @keyframes slide-top {
+    /* Animation fade-in effect */
+
+    @keyframes fadeIn {
       0% {
-        transform: translateY(100%);
+        opacity: 0;
       }
       100% {
-        transform: translateY(0);
+        opacity: 1;
       }
     }
   }
@@ -417,7 +447,7 @@ main {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          margin-bottom: 20px;
+          margin: 20px;
           li {
             background-color: $text-color-dark;
             color: $text-color-light;
@@ -470,7 +500,6 @@ main {
 
 /* Contact Section */
 .contact-me {
-  min-height: calc(100vh - 310px);
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1170px;
@@ -491,7 +520,7 @@ main {
       justify-content: flex-start;
       align-items: center;
       .icon {
-        background-color: darken($primary-color, 15);
+        background-color: #f3c7afe8;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -503,13 +532,13 @@ main {
         transition: all 0.4s ease-in-out;
         i {
           font-size: 1.5rem;
-          color: $text-color-light;
+          color: $text-color-dark;
           margin: 0 1rem;
         }
         &:hover {
-          background-color: #f3c7afe8;
+          background-color: darken($primary-color, 15);
           i {
-            color: $text-color-dark;
+            color: $text-color-light;
           }
         }
       }
@@ -528,6 +557,7 @@ main {
         transition-duration: 0.2s;
         &:hover {
           text-decoration: underline;
+          color: rgb(62, 62, 62);
         }
       }
     }
@@ -571,7 +601,7 @@ main {
 /* Footer Section */
 #main-footer {
   @include easeOut;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
 }
 

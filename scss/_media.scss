@@ -7,15 +7,58 @@
       margin-left: 10px;
     }
   }
+  #about,
+  #projects,
+  #contact,
+  #thanks {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+      font-weight: 400;
+      &.lg-heading {
+        font-size: 2rem;
+      }
+      &.sm-heading {
+        font-size: 1.2rem;
+      }
+    }
+  }
   /* About Section */
   .about-content {
+    .bio {
+      p {
+        //font-size: 0.5rem;
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
     .profile {
       grid-template-columns: 1fr;
+
+      margin-left: 0;
       &-btn {
-        font-size: 12px;
+        li {
+          font-size: 0.53rem;
+          &.active {
+            @include easeOut();
+            background-color: $secondary-color;
+            padding: 7px;
+            color: #030303;
+            font-weight: 600;
+            border-radius: 0.5rem;
+          }
+        }
       }
       &-content {
         margin-top: 20px;
+      }
+
+      &-link {
+        display: flex;
       }
     }
   }
@@ -27,8 +70,8 @@
 @include mediaSm {
   main {
     flex-wrap: wrap-reverse;
-    align-content: space-around;
-    min-height: calc(100vh - 140px);
+    align-content: space-evenly;
+    min-height: calc(100vh - 145px);
     &#home {
       margin: 0;
     }
@@ -50,7 +93,6 @@
       text-align: center;
       margin-right: 0;
       margin-top: 0;
-      padding-bottom: 80px;
     }
     .lg-heading {
       font-size: 3.5rem;
@@ -60,7 +102,7 @@
     }
     .branding {
       height: 155px;
-      margin-left: 25px;
+      margin-left: 20px;
       //margin: 50px 55px 0 0;
       .portrait {
         background-image: url("../img/portrait_profile_small.jpg");
@@ -78,9 +120,6 @@
     overflow: hidden;
     z-index: 1;
     background: rgba(lighten($primary-color, 5), 0.5);
-    .menu-button {
-      visibility: hidden;
-    }
     .menu-nav {
       display: flex;
       flex-direction: row;
@@ -90,37 +129,58 @@
       .nav-item {
         margin: 1rem;
         &:hover {
-          height: 55px;
-          width: 55px;
+          transition: all 0.5s;
+          transform: scale(1.2);
           .tooltip {
             visibility: hidden;
           }
         }
+        @include easeOut;
       }
     }
   }
 
   /* About Section */
   .about-content {
+    .bio {
+      p {
+        a {
+          font-size: 0.6rem;
+        }
+      }
+    }
     .profile {
       grid-template-columns: 1fr;
       &-btn {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
+        font-size: 0.95rem;
         .fas {
           margin-right: 10px;
         }
       }
       &-content {
         margin-top: 20px;
+        .certificates {
+          .cert {
+            a {
+              img {
+                height: 70px;
+                width: 70px;
+              }
+              .cert-title {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
       }
     }
   }
 
   /* Contact Section */
   .contact-me {
-    //min-height: calc(100vh - 80px);
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
@@ -140,6 +200,9 @@
 
 @include mediaMd {
   main {
+    // #home {
+    //   min-height: calc(100vh - 22px);
+    // }
     &#thanks {
       .sm-heading {
         font-size: 1.3rem;
@@ -164,6 +227,9 @@
       padding-bottom: 0;
       padding-top: 20px;
     }
+  }
+  .contact-me {
+    height: 100%;
   }
 }
 
