@@ -4,7 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass -w scss/ -o files/css/ --recursive"
   },
   "keywords": [
     "HTML5",
@@ -12,5 +12,8 @@
     "JavaScript"
   ],
   "author": "Shoaib Kiyani",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
