@@ -1,4 +1,4 @@
 # shoaib_portfolio
-My personal portfolio project built with HTML, SCSS &amp; JavaScript.
+My personal portfolio project was built with HTML, SCSS & JavaScript.
 
-The updated project is in publish branch. To run the project use command 'npm run sass'.
+To run the project use the command 'npm run sass'.
