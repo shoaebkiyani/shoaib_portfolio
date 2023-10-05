@@ -100,12 +100,14 @@ h5 {
 			display: flex;
 			align-items: center;
 			width: 100%;
+      font-size: medium;
 			img {
 				margin-left: 10px;
+        margin-top: 0;
 				background-color: rgba(#fff, 0.7);
 				border-radius: 10px;
-				height: 35px;
-				width: 55px;
+				height: 25px;
+				width: 85px;
 			}
 		}
 	}
