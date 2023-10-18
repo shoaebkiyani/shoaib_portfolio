@@ -46,4 +46,4 @@ resumeLink.forEach((item) => {
   });
 });
 
-document.getElementsByTagName("FORM").reset();
+document.getElementsByTagName("FORM").value = '';
