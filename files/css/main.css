@@ -622,6 +622,14 @@ main {
       font-size: 12px; } }
 
 @media only screen and (max-width: 499px) {
+  main#home {
+    max-width: 100%;
+    min-height: calc(100vh - 110px);
+    text-align: center; }
+    main#home h1.lg-heading, main#home h2.lg-heading, main#home h3.lg-heading, main#home h4.lg-heading, main#home h5.lg-heading {
+      font-size: 3rem; }
+    main#home h1.sm-heading, main#home h2.sm-heading, main#home h3.sm-heading, main#home h4.sm-heading, main#home h5.sm-heading {
+      font-size: small; }
   .about-content .profile-btn {
     font-size: 0.6rem; }
   .about-content .profile-content {
@@ -631,5 +639,5 @@ main {
       width: 55px; }
     .about-content .profile-content .certificates .cert a .cert-title {
       font-size: 0.8rem; }
-  .about-content .profile .contact-me {
-    margin-bottom: 15rem; } }
+  .contact-me {
+    margin-bottom: 17rem; } }

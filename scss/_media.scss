@@ -5,7 +5,7 @@
 
 	header {
 		position: fixed;
-    bottom: 0;
+		bottom: 0;
 		min-height: 100px;
 		width: 100%;
 		align-items: flex-end;
@@ -98,7 +98,7 @@
 				}
 			}
 			&-content {
-        padding: 10px 10px 0px 10px;
+				padding: 10px 10px 0px 10px;
 				.certificates {
 					.cert {
 						a {
@@ -148,6 +148,21 @@
 }
 
 @include mediaXSm {
+	main {
+		&#home {
+			max-width: 100%;
+			min-height: calc(100vh - 110px);
+			h1,h2,h3,h4,h5{
+				&.lg-heading {
+					font-size: 3rem;
+				}
+				&.sm-heading {
+					font-size: small
+				}
+			}
+			text-align: center;
+		}
+	}
 	.about-content {
 		.profile {
 			&-btn {
@@ -169,9 +184,9 @@
 					}
 				}
 			}
-      .contact-me {
-        margin-bottom: 15rem;
-      }
 		}
+	}
+	.contact-me {
+		margin-bottom: 17rem;
 	}
 }
